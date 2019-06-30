@@ -1,4 +1,4 @@
-server_installation:
+server_setup:
   update:
     sudo: true
     commands:
@@ -26,11 +26,14 @@ server_installation:
     sudo: true
     commands:
       - 'chmod 757 /opt/'
+
 environment_info:
   application: 'odoo'
-  application_version: '11.0'
+  application_version: '12.0'
   application_service: 'web'
+  application_container_user: '0'
   git_submodule_path: 'addons'
+  addons_dir: '/mnt'
   nginx_service: 'web'
   nginx_virtual_port: '8069'
   odoo_config: 'config/odoo.conf'
@@ -39,11 +42,14 @@ environment_info:
     - 'docker-compose.yml'
     - 'config/odoo.conf'
     - 'config/odoo-test.conf'
-environment_installation:
-    entrypoint_chmod:
-      commands:
-        - 'chmod 655 entrypoint.sh'
+
+environment_setup:
+  entrypoint_chmod:
+    commands:
+      - 'chmod 655 entrypoint.sh'
+
 environment_test_info:
+  test_mute: true
   test_error_regex: '^(?:\d{4}-\d\d-\d\d \d\d:\d\d:\d\d,\d{3} \d+ (?:ERROR|CRITICAL) )|(?:Traceback \(most recent call last\):)$'
   test_warn_regex: '^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d,\d{3} \d+ WARNING '
   script_test:
