@@ -24,10 +24,10 @@ services:
     ports:
       - '5432'
     environment:
-      - POSTGRES_PASSWORD=${password('postgres')}
+      - POSTGRES_PASSWORD=AHDRrZvyh8bS
       - POSTGRES_USER=odoo
       - POSTGRES_DB=postgres
-      - PGPASS=${password('postgres')}
+      - PGPASS=AHDRrZvyh8bS
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - 'postgres-data:/var/lib/postgresql/data/pgdata'
