@@ -1,0 +1,21 @@
+<odoo>
+    <template id="frontend_layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//a[hasclass('logo')]" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath expr="//a[hasclass('logo')]" position="after">
+            <a href="/" class="navbar-brand logo" t-if="website.name == 'Excelencia Literaria'">
+                <img src="/website_excelencia_literaria/static/src/img/logo_white.png" class="logo_white"
+                     t-att-alt="'Logo of %s' % website.name" t-att-title="website.name" />
+                <img src="/website_excelencia_literaria/static/src/img/logo_gray.png" class="logo_gray"
+                     t-att-alt="'Logo of %s' % website.name" t-att-title="website.name" />
+            </a>
+        </xpath>
+    </template>
+
+    <template id="brand_promotion" inherit_id="website.brand_promotion">
+        <xpath expr="//div[hasclass('o_brand_promotion')]" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+    </template>
+</odoo>

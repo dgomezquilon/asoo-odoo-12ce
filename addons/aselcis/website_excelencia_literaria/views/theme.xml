@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="theme_customize" inherit_id="website.theme_customize" priority="18">
+        <xpath expr="//content" position="inside">
+            <opt data-xmlid="website_excelencia_literaria.theme_excelencia_literaria_bs_variables,website_excelencia_literaria.theme_excelencia_literaria"
+                 data-icon="/website_excelencia_literaria/static/src/img/excelencia_thumbnail.png" />
+        </xpath>
+    </template>
+
+    <template id="theme_excelencia_literaria_bs_variables" name="Excelencia literaria" inherit_id="web._assets_frontend_helpers" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/lib/bootswatch/excelencia_literaria/_colors.scss" />
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/lib/bootswatch/excelencia_literaria/_variables.scss" />
+        </xpath>
+    </template>
+
+    <template id="theme_excelencia_literaria" name="Aselcis" inherit_id="website.assets_frontend" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <!-- Fonts -->
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/lib/fonts/prata/_font.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/lib/fonts/ebgaramond/_font.scss"/>
+
+            <!-- Variables -->
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/src/scss/_colors.scss" />
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/src/scss/_variables.scss" />
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/src/scss/_helpers.scss" />
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/src/scss/_text.scss" />
+
+            <!-- Theme -->
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/lib/bootswatch/excelencia_literaria/_bootswatch.scss" />
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/src/scss/_general.scss" />
+
+            <!-- Pages -->
+            <link rel="stylesheet" type="text/scss" href="/website_excelencia_literaria/static/src/scss/pages/homepage.scss" />
+        </xpath>
+        <xpath expr="//script[last()]" position="after">
+      </xpath>
+    </template>
+
+</odoo>
