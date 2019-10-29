@@ -2,3 +2,7 @@
 	path = addons/OCA/l10n-spain
 	url = https://github.com/OCA/l10n-spain.git
 	branch = 12.0
+[submodule "addons/OCA/bank-payment"]
+	path = addons/OCA/bank-payment
+	url = https://github.com/OCA/bank-payment.git
+	branch = 12.0
